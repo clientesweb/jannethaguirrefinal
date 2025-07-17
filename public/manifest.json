@@ -1,0 +1,21 @@
+{
+  "name": "Janneth Aguirre - Bienes Raíces",
+  "short_name": "Janneth Aguirre",
+  "description": "Janneth Aguirre, tu experta inmobiliaria en Guayaquil y Samborondón, Ecuador. Compra, venta, alquiler e inversión de propiedades.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#dc2626",
+  "icons": [
+    {
+      "src": "/images/favicon-janneth-aguirre.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon-janneth-aguirre.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
