@@ -346,19 +346,34 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                       </div>
 
                       <div className="space-y-3 mb-6">
-                        <Link href={`tel:${property.contact.phone.replace(/\s/g, "")}`} passHref>
+                        <Link
+                          href={`https://wa.me/593987167782?text=${encodeURIComponent(`Hola Janneth, me interesa la propiedad "${property.name}" ubicada en ${property.location}. ¿Podrías darme más información y agendar una visita?`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          passHref
+                        >
                           <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
                             <Phone className="w-5 h-5" /> Llamar a Janneth
                           </Button>
                         </Link>
-                        <Link href={`mailto:${property.contact.email}`} passHref>
+                        <Link
+                          href={`https://wa.me/593987167782?text=${encodeURIComponent(`Hola Janneth, me interesa recibir más información sobre "${property.name}" por correo electrónico. Mi email es: [escribe tu email aquí]. ¿Podrías enviarme el brochure completo?`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          passHref
+                        >
                           <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
-                            <Mail className="w-5 h-5" /> Enviar Correo
+                            <Mail className="w-5 h-5" /> Solicitar Info por Email
                           </Button>
                         </Link>
-                        <Link href={`https://wa.me/${property.contact.phone.replace(/\s|\+/g, "")}`} passHref>
+                        <Link
+                          href={`https://wa.me/593987167782?text=${encodeURIComponent(`Hola Janneth, me interesa la propiedad "${property.name}" (${property.priceType} $${property.price.toLocaleString()}). ¿Podríamos conversar sobre las opciones de financiamiento y agendar una cita?`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          passHref
+                        >
                           <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
-                            <Phone className="w-5 h-5" /> WhatsApp
+                            <Phone className="w-5 h-5" /> WhatsApp Directo
                           </Button>
                         </Link>
                       </div>
