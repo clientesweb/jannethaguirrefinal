@@ -14,8 +14,8 @@ export interface Property {
   images: string[]
   specifications: Record<string, string>
   financing: {
-    initialPayment: string
-    bankFinancing: string
+    title: string
+    options: string[]
     details: string
   }
   contact: {
@@ -71,9 +71,15 @@ export const properties: Property[] = [
       Estado: "En construcción",
     },
     financing: {
-      initialPayment: "30% de entrada",
-      bankFinancing: "70% con crédito bancario",
-      details: "Facilidades de pago para la entrada. Asesoría para crédito hipotecario.",
+      title: "FINANCIAMIENTO FLEXIBLE",
+      options: [
+        "Reserva con solo $500",
+        "10% a la firma de la promesa de compraventa",
+        "20% durante la construcción en hasta 36 meses",
+        "70% con financiamiento bancario o BIESS",
+      ],
+      details:
+        "Facilidades de pago flexibles que se adaptan a tu presupuesto. Te asesoramos en todo el proceso de financiamiento bancario.",
     },
     contact: {
       phone: "+593 98 716 7782",
@@ -123,9 +129,15 @@ export const properties: Property[] = [
       Estado: "En construcción",
     },
     financing: {
-      initialPayment: "30% de entrada",
-      bankFinancing: "70% con crédito bancario",
-      details: "Facilidades de pago para la entrada. Asesoría para crédito hipotecario.",
+      title: "FINANCIAMIENTO FLEXIBLE",
+      options: [
+        "Reserva con solo $500",
+        "10% a la firma de la promesa de compraventa",
+        "20% durante la construcción en hasta 36 meses",
+        "70% con financiamiento bancario o BIESS",
+      ],
+      details:
+        "Facilidades de pago flexibles que se adaptan a tu presupuesto. Te asesoramos en todo el proceso de financiamiento bancario.",
     },
     contact: {
       phone: "+593 98 716 7782",
@@ -174,9 +186,15 @@ export const properties: Property[] = [
       Estado: "Listo para entrega",
     },
     financing: {
-      initialPayment: "30% de entrada",
-      bankFinancing: "70% con crédito bancario",
-      details: "Facilidades de pago para la entrada. Asesoría para crédito hipotecario.",
+      title: "FINANCIAMIENTO FLEXIBLE",
+      options: [
+        "Reserva con solo $500",
+        "10% a la firma de la promesa de compraventa",
+        "20% durante la construcción en hasta 36 meses",
+        "70% con financiamiento bancario o BIESS",
+      ],
+      details:
+        "Facilidades de pago flexibles que se adaptan a tu presupuesto. Te asesoramos en todo el proceso de financiamiento bancario.",
     },
     contact: {
       phone: "+593 98 716 7782",
@@ -222,9 +240,15 @@ export const properties: Property[] = [
       Estado: "Listo para entrega",
     },
     financing: {
-      initialPayment: "30% de entrada",
-      bankFinancing: "70% con crédito bancario",
-      details: "Facilidades de pago para la entrada. Asesoría para crédito hipotecario.",
+      title: "FINANCIAMIENTO FLEXIBLE",
+      options: [
+        "Reserva con solo $500",
+        "10% a la firma de la promesa de compraventa",
+        "20% durante la construcción en hasta 36 meses",
+        "70% con financiamiento bancario o BIESS",
+      ],
+      details:
+        "Facilidades de pago flexibles que se adaptan a tu presupuesto. Te asesoramos en todo el proceso de financiamiento bancario.",
     },
     contact: {
       phone: "+593 98 716 7782",
@@ -273,9 +297,15 @@ export const properties: Property[] = [
       Estado: "En construcción",
     },
     financing: {
-      initialPayment: "30% de entrada",
-      bankFinancing: "70% con crédito bancario",
-      details: "Facilidades de pago para la entrada. Asesoría para crédito hipotecario.",
+      title: "FINANCIAMIENTO FLEXIBLE",
+      options: [
+        "Reserva con solo $500",
+        "10% a la firma de la promesa de compraventa",
+        "20% durante la construcción en hasta 36 meses",
+        "70% con financiamiento bancario o BIESS",
+      ],
+      details:
+        "Facilidades de pago flexibles que se adaptan a tu presupuesto. Te asesoramos en todo el proceso de financiamiento bancario.",
     },
     contact: {
       phone: "+593 98 716 7782",
