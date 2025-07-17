@@ -20,7 +20,7 @@ import {
   CheckCircle,
 } from "lucide-react"
 import { notFound } from "next/navigation"
-import { properties } from "@/lib/properties" // Importar las propiedades desde el archivo compartido
+import { properties } from "@/lib/properties"
 
 interface PropertyDetailPageProps {
   params: {
@@ -28,7 +28,7 @@ interface PropertyDetailPageProps {
   }
 }
 
-export default function PropertyDetailPageClient({ params }: PropertyDetailPageProps) {
+export default function PropertyDetailPage({ params }: PropertyDetailPageProps) {
   const property = properties.find((p) => p.id === params.id)
 
   if (!property) {
@@ -97,14 +97,14 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <Link
             href="/propiedades"
-            className="inline-flex items-center text-gray-600 hover:text-red-600 font-poppins transition-colors text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-black/50"
+            className="inline-flex items-center text-gray-600 hover:text-red-600 font-poppins transition-colors text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 rounded-md"
           >
             <ArrowLeft className="w-4 h-4 mr-2" aria-hidden="true" />
             Volver a propiedades
           </Link>
         </div>
 
-        {/* Property Images Gallery - Plusvalia Style */}
+        {/* Property Images Gallery */}
         <section className="pb-6 sm:pb-8" aria-label="Galería de imágenes de la propiedad">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
@@ -119,21 +119,25 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                 />
 
                 {/* Navigation Arrows */}
-                <button
-                  onClick={prevImage}
-                  className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50"
-                  aria-label="Imagen anterior"
-                >
-                  <ChevronLeft className="w-4 sm:w-6 h-4 sm:h-6" />
-                </button>
+                {property.images.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                      aria-label="Imagen anterior"
+                    >
+                      <ChevronLeft className="w-4 sm:w-6 h-4 sm:h-6" />
+                    </button>
 
-                <button
-                  onClick={nextImage}
-                  className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50"
-                  aria-label="Imagen siguiente"
-                >
-                  <ChevronRight className="w-4 sm:w-6 h-4 sm:h-6" />
-                </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+                      aria-label="Imagen siguiente"
+                    >
+                      <ChevronRight className="w-4 sm:w-6 h-4 sm:h-6" />
+                    </button>
+                  </>
+                )}
 
                 {/* Image Counter */}
                 <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-poppins">
@@ -146,6 +150,15 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                     variant="outline"
                     size="sm"
                     className="bg-white/90 hover:bg-white border-0 text-gray-700 hover:text-gray-900 backdrop-blur-sm"
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator.share({
+                          title: property.name,
+                          text: property.description,
+                          url: window.location.href,
+                        })
+                      }
+                    }}
                   >
                     <Share2 className="w-4 h-4 mr-2" />
                     Compartir
@@ -154,25 +167,27 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
               </div>
 
               {/* Image Thumbnails */}
-              <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
-                {property.images.map((image: string, index: number) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageIndex(index)}
-                    className={`relative flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                      currentImageIndex === index ? "border-red-600" : "border-gray-200 hover:border-gray-300"
-                    }`}
-                  >
-                    <Image
-                      src={image || "/placeholder.svg"}
-                      alt={`${property.name} - Miniatura ${index + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="80px"
-                    />
-                  </button>
-                ))}
-              </div>
+              {property.images.length > 1 && (
+                <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
+                  {property.images.map((image: string, index: number) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`relative flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 transition-colors ${
+                        currentImageIndex === index ? "border-red-600" : "border-gray-200 hover:border-gray-300"
+                      }`}
+                    >
+                      <Image
+                        src={image || "/placeholder.svg"}
+                        alt={`${property.name} - Miniatura ${index + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="80px"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -221,7 +236,7 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                       </div>
                       <div className="flex items-center">
                         <Ruler className="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-gray-500" />
-                        <span className="font-poppins font-medium text-sm sm:text-base">{property.area} m²</span>
+                        <span className="font-poppins font-medium text-sm sm:text-base">{property.area}</span>
                       </div>
                       <div className="flex items-center">
                         <Car className="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-gray-500" />
@@ -243,39 +258,16 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                     </p>
                   </div>
 
-                  {/* Location Map */}
-                  <div className="mb-6 sm:mb-8">
-                    <h2 className="text-xl sm:text-2xl font-anton font-bold text-gray-900 mb-3 sm:mb-4">UBICACIÓN</h2>
-                    <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
-                      <div className="flex items-center mb-4">
-                        <MapPin className="w-5 h-5 text-red-600 mr-2" />
-                        <span className="font-poppins font-medium text-gray-900">{property.location}</span>
-                      </div>
-                      <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden">
-                        <Image
-                          src="/images/isla-mocoli-map.png"
-                          alt="Ubicación del proyecto en Isla Mocolí - Mapa con ubicación exacta Km 6"
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, 66vw"
-                        />
-                      </div>
-                      <p className="font-poppins text-gray-600 text-sm mt-3">
-                        Ubicación estratégica en {property.location}, una de las zonas de mayor plusvalía de{" "}
-                        {property.country}, rodeada de naturaleza y con fácil acceso a la ciudad.
-                      </p>
-                    </div>
-                  </div>
-
                   {/* Features */}
                   <div className="mb-6 sm:mb-8">
                     <h2 className="text-xl sm:text-2xl font-anton font-bold text-gray-900 mb-3 sm:mb-4">
-                      AMENIDADES Y SERVICIOS
+                      CARACTERÍSTICAS
                     </h2>
                     <div className="grid sm:grid-cols-2 gap-2 sm:gap-3">
                       {property.features.map((feature: string, index: number) => (
                         <div key={index} className="flex items-center">
-                          <CheckCircle className="w-5 h-5 text-green-500" /> {feature}
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                          <span className="font-poppins text-gray-700 text-sm sm:text-base">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -302,17 +294,17 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                   {property.financing && (
                     <div>
                       <h2 className="text-xl sm:text-2xl font-anton font-bold text-gray-900 mb-3 sm:mb-4">
-                        FINANCIAMIENTO FLEXIBLE
+                        FINANCIAMIENTO
                       </h2>
                       <div className="bg-red-50 rounded-lg p-4 sm:p-6">
-                        <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
-                          <p>
+                        <div className="space-y-3">
+                          <p className="font-poppins text-gray-700">
                             <strong>Pago Inicial:</strong> {property.financing.initialPayment}
                           </p>
-                          <p>
+                          <p className="font-poppins text-gray-700">
                             <strong>Financiamiento Bancario:</strong> {property.financing.bankFinancing}
                           </p>
-                          <p>{property.financing.details}</p>
+                          <p className="font-poppins text-gray-600 text-sm">{property.financing.details}</p>
                         </div>
                       </div>
                     </div>
@@ -323,7 +315,7 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                 <div className="lg:col-span-1">
                   <Card className="sticky top-8">
                     <CardHeader>
-                      <CardTitle className="text-lg sm:text-xl font-anton font-bold text-gray-900 mb-4">
+                      <CardTitle className="text-lg sm:text-xl font-anton font-bold text-gray-900">
                         CONTACTAR AGENTE
                       </CardTitle>
                     </CardHeader>
@@ -350,17 +342,15 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                           href={`https://wa.me/593987167782?text=${encodeURIComponent(`Hola Janneth, me interesa la propiedad "${property.name}" ubicada en ${property.location}. ¿Podrías darme más información y agendar una visita?`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          passHref
                         >
                           <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
-                            <Phone className="w-5 h-5" /> Llamar a Janneth
+                            <Phone className="w-5 h-5" /> Llamar por WhatsApp
                           </Button>
                         </Link>
                         <Link
-                          href={`https://wa.me/593987167782?text=${encodeURIComponent(`Hola Janneth, me interesa recibir más información sobre "${property.name}" por correo electrónico. Mi email es: [escribe tu email aquí]. ¿Podrías enviarme el brochure completo?`)}`}
+                          href={`https://wa.me/593987167782?text=${encodeURIComponent(`Hola Janneth, me interesa recibir más información sobre "${property.name}" por correo electrónico. ¿Podrías enviarme el brochure completo?`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          passHref
                         >
                           <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
                             <Mail className="w-5 h-5" /> Solicitar Info por Email
@@ -370,10 +360,9 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
                           href={`https://wa.me/593987167782?text=${encodeURIComponent(`Hola Janneth, me interesa la propiedad "${property.name}" (${property.priceType} $${property.price.toLocaleString()}). ¿Podríamos conversar sobre las opciones de financiamiento y agendar una cita?`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          passHref
                         >
                           <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300">
-                            <Phone className="w-5 h-5" /> WhatsApp Directo
+                            <Phone className="w-5 h-5" /> Consultar Financiamiento
                           </Button>
                         </Link>
                       </div>
@@ -389,69 +378,75 @@ export default function PropertyDetailPageClient({ params }: PropertyDetailPageP
             </div>
           </div>
         </section>
+      </main>
 
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-8 sm:py-12" role="contentinfo">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <div>
-                  <Image
-                    src="/images/logo-janneth-aguirre.webp"
-                    alt="Janneth Aguirre Bienes Raíces"
-                    width={200}
-                    height={80}
-                    className="h-10 sm:h-12 w-auto mb-3 sm:mb-4 brightness-0 invert"
-                  />
-                  <p className="font-poppins text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Tu experta en bienes raíces de confianza. Encuentra tu hogar ideal o realiza la mejor inversión.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg sm:text-xl font-anton font-bold mb-3 sm:mb-4">CONTACTO</h3>
-                  <div className="space-y-2 font-poppins text-gray-300 text-sm sm:text-base">
-                    <p>🌐 www.jannethaguirre.online</p>
-                    <p>📧 info@jannethaguirrebienesraices.com</p>
-                    <p>📱 +593 98 716 7782</p>
-                    <p>📍 Guayaquil, Ecuador</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-lg sm:text-xl font-anton font-bold mb-3 sm:mb-4">SÍGUENOS</h3>
-                  <div className="flex flex-wrap gap-3 sm:gap-4">
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
-                    >
-                      Facebook
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
-                    >
-                      Instagram
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
-                    >
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
-                <p className="font-poppins text-gray-400 text-xs sm:text-sm">
-                  © 2024 Janneth Aguirre Bienes Raíces. Todos los derechos reservados.
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-8 sm:py-12" role="contentinfo">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              <div>
+                <Image
+                  src="/images/logo-janneth-aguirre.webp"
+                  alt="Janneth Aguirre Bienes Raíces"
+                  width={200}
+                  height={80}
+                  className="h-10 sm:h-12 w-auto mb-3 sm:mb-4 brightness-0 invert"
+                />
+                <p className="font-poppins text-gray-300 text-sm sm:text-base leading-relaxed">
+                  Tu experta en bienes raíces de confianza. Encuentra tu hogar ideal o realiza la mejor inversión.
                 </p>
               </div>
+
+              <div>
+                <h3 className="text-lg sm:text-xl font-anton font-bold mb-3 sm:mb-4">CONTACTO</h3>
+                <div className="space-y-2 font-poppins text-gray-300 text-sm sm:text-base">
+                  <p>🌐 www.jannethaguirre.online</p>
+                  <p>📧 info@jannethaguirrebienesraices.com</p>
+                  <p>📱 +593 98 716 7782</p>
+                  <p>📍 Guayaquil, Ecuador</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg sm:text-xl font-anton font-bold mb-3 sm:mb-4">SÍGUENOS</h3>
+                <div className="flex flex-wrap gap-3 sm:gap-4">
+                  <a
+                    href="https://www.instagram.com/janneth_aguirrem/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.facebook.com/jannethaguirrebienesraices"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/janneth-aguirre/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
+              <p className="font-poppins text-gray-400 text-xs sm:text-sm">
+                © 2024 Janneth Aguirre Bienes Raíces. Todos los derechos reservados.
+              </p>
             </div>
           </div>
-        </footer>
-      </main>
+        </div>
+      </footer>
     </div>
   )
 }
