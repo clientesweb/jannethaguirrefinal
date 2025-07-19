@@ -458,10 +458,10 @@ export default function HomePage() {
         
          {/* About Janneth Banner - NEW */}
         <section className="w-full" aria-label="Conoce más sobre Janneth Aguirre">
-          <Link href="/nosotros" className="block w-full hover:opacity-95 transition-opacity">
+          <Link href="https://jannethaguirre.com" className="block w-full hover:opacity-95 transition-opacity">
             <Image
-              src="/images/banner-app-descarga.png"
-              alt="Janneth Aguirre - Embajadora de Ecuador en el 3° Congreso Internacional de Mujeres 2025 en Lima, Perú"
+              src="/images/banner-app-descarga.webp"
+              alt="Descargá la app de Janneth Aguirre para encontrar propiedades, hacer consultas y acceder a contenido eclusivos de inversiones en Ecuador, Panamá y Estados Unidos"
               width={1920}
               height={600}
               className="w-full h-auto"
