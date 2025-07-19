@@ -211,7 +211,7 @@ export default function HomePage() {
                         <MapPin className="w-3 sm:w-4 h-3 sm:h-4 mr-1 sm:mr-2" aria-hidden="true" />
                         <span className="font-poppins text-xs sm:text-sm">Samborondón, Ecuador</span>
                       </div>
-                      <div className="text-red-600 font-anton font-bold text-base sm:text-lg">Desde $119,900</div>
+                      <div className="text-red-600 font-anton font-bold text-base sm:text-lg">Desde $164,900</div>
                     </div>
                     <Link href="/propiedades/departamento-samborondon">
                       <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-poppins font-semibold rounded-lg transition-colors text-sm sm:text-base py-2 sm:py-3">
