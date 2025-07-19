@@ -5,7 +5,7 @@ import { X } from "lucide-react"
 
 const announcements = [
   "🏆 Embajadora de Ecuador - Congreso Internacional de Mujeres 2025",
-  "🌟 20+ años de experiencia - Tu experta de confianza en bienes raíces",
+  "🌟 15+ años de experiencia - Tu experta de confianza en bienes raíces",
   "🏠 Propiedades en Guayaquil, Samborondón y costa ecuatoriana",
   "💼 Certificada NAR, CRS, FENACBRE y CAINEC",
 ]
