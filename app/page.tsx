@@ -455,6 +455,20 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        
+         {/* About Janneth Banner - NEW */}
+        <section className="w-full" aria-label="Conoce más sobre Janneth Aguirre">
+          <Link href="/nosotros" className="block w-full hover:opacity-95 transition-opacity">
+            <Image
+              src="/images/sobre-janneth-aguirre-new.webp"
+              alt="Janneth Aguirre - Embajadora de Ecuador en el 3° Congreso Internacional de Mujeres 2025 en Lima, Perú"
+              width={1920}
+              height={600}
+              className="w-full h-auto"
+              sizes="100vw"
+            />
+          </Link>
+        </section>
 
         {/* Strong CTA Section - PURCHASE */}
         <section id="contacto" className="py-12 sm:py-16 lg:py-20 bg-red-600" aria-labelledby="cta-heading">
