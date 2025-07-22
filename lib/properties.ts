@@ -216,7 +216,7 @@ export const properties: Property[] = [
     description:
       "Invierte en tu futuro con estos locales comerciales y consultorios estratégicamente ubicados en el corazón de Nuevo Samborondón.",
     longDescription:
-      "Estos locales comerciales y consultorios están estratégicamente ubicados en el corazón de Samborondón, ideal para emprendedores y profesionales que buscan un espacio moderno y funcional con alto flujo de clientes. Variedad de tamaños disponibles para adaptarse a tus necesidades específicas de negocio.",
+      "Estos locales comerciales y consultorios están estratégicamente ubicados en el corazón de Nuevo Samborondón, ideal para emprendedores y profesionales que buscan un espacio moderno y funcional con alto flujo de clientes. Variedad de tamaños disponibles para adaptarse a tus necesidades específicas de negocio.",
     features: [
       "Ubicación privilegiada",
       "Diseño moderno",
@@ -268,9 +268,9 @@ export const properties: Property[] = [
     bathrooms: 1,
     parking: 1,
     description:
-      "Vive el lujo y la comodidad en estos exclusivos departamentos ubicados en una de las zonas más prestigiosas de Samborondón.",
+      "Vive el lujo y la comodidad en estos exclusivos departamentos ubicados en una de las zonas más prestigiosas de Nuevo Samborondón.",
     longDescription:
-      "Estos exclusivos departamentos ofrecen una experiencia de vida inigualable con acabados de alta gama, amplios espacios y vistas espectaculares. Cada departamento ha sido diseñado para ofrecer el máximo confort, con amenidades de primera clase y la tranquilidad de un entorno seguro en una de las zonas más prestigiosas de Samborondón.",
+      "Estos exclusivos departamentos ofrecen una experiencia de vida inigualable con acabados de alta gama, amplios espacios y vistas espectaculares. Cada departamento ha sido diseñado para ofrecer el máximo confort, con amenidades de primera clase y la tranquilidad de un entorno seguro en una de las zonas más prestigiosas de Nuevo Samborondón. Contamos con opciones de departamentos de $134900, 2 dormitorios, 2 baños y un estacionamiento. ¡esperamos su consulta!",
     features: [
       "Acabados de alta gama",
       "Diseño moderno y elegante",
