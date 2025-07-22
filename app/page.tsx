@@ -499,7 +499,7 @@ export default function HomePage() {
                 </Button>
               </div>
               <p className="text-white/80 font-poppins text-sm sm:text-base">
-                📱 +593 98 716 7782 | 📧 info@jannethaguirrebienesraices.com
+                📱 +593 98 716 7782 | 📧 jannethaguirrecontacto@gmail.com
               </p>
             </div>
           </div>
@@ -523,7 +523,7 @@ export default function HomePage() {
                     className="h-12 w-auto mb-4 brightness-0 invert"
                   />
                   <p className="font-poppins text-gray-300 text-sm leading-relaxed mb-4">
-                    Tu experta en bienes raíces de confianza con más de 20 años de experiencia. Encuentra tu hogar ideal
+                    Tu experta en bienes raíces de confianza con más de 15 años de experiencia. Encuentra tu hogar ideal
                     o realiza la mejor inversión.
                   </p>
                   <div className="flex items-center space-x-4">
@@ -597,10 +597,10 @@ export default function HomePage() {
                     <div className="flex items-center">
                       <Mail className="w-4 h-4 text-red-500 mr-3" />
                       <a
-                        href="mailto:info@jannethaguirrebienesraices.com"
+                        href="mailto:jannethaguirrecontacto@gmail.com"
                         className="text-gray-300 hover:text-white transition-colors"
                       >
-                        info@jannethaguirrebienesraices.com
+                        jannethaguirrecontacto@gmail.com
                       </a>
                     </div>
                     <div className="flex items-center">
