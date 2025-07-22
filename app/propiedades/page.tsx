@@ -334,7 +334,7 @@ export default function PropiedadesPage() {
                 <h3 className="text-lg sm:text-xl font-anton font-bold mb-3 sm:mb-4">CONTACTO</h3>
                 <div className="space-y-2 font-poppins text-gray-300 text-sm sm:text-base">
                   <p>🌐 www.jannethaguirre.online</p>
-                  <p>📧 info@jannethaguirrebienesraices.com</p>
+                  <p>📧 jannethaguirrecontacto@gmail.com</p>
                   <p>📱 +593 98 716 7782</p>
                   <p>📍 Guayaquil, Ecuador</p>
                 </div>
