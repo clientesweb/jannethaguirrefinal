@@ -239,12 +239,14 @@ export default function PropertyDetailPage({ params }: PropertyDetailPageProps) 
                         <Ruler className="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-gray-500" />
                         <span className="font-poppins font-medium text-sm sm:text-base">{property.area}</span>
                       </div>
-                      <div className="flex items-center">
-                        <Car className="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-gray-500" />
-                        <span className="font-poppins font-medium text-sm sm:text-base">
-                          {property.parking} Estacionamiento
-                        </span>
-                      </div>
+                      {property.parking > 0 && (
+                        <div className="flex items-center">
+                          <Car className="w-4 sm:w-5 h-4 sm:h-5 mr-2 text-gray-500" />
+                          <span className="font-poppins font-medium text-sm sm:text-base">
+                            {property.parking} Estacionamiento
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -418,7 +420,7 @@ export default function PropertyDetailPage({ params }: PropertyDetailPageProps) 
 
                       <div className="text-center text-xs sm:text-sm text-gray-500 font-poppins">
                         <p>📱 +593 98 716 7782</p>
-                        <p>📧 info@jannethaguirrebienesraices.com</p>
+                        <p>📧 jannethaguirrecontacto@gmail.com</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -451,7 +453,7 @@ export default function PropertyDetailPage({ params }: PropertyDetailPageProps) 
                 <h3 className="text-lg sm:text-xl font-anton font-bold mb-3 sm:mb-4">CONTACTO</h3>
                 <div className="space-y-2 font-poppins text-gray-300 text-sm sm:text-base">
                   <p>🌐 www.jannethaguirre.online</p>
-                  <p>📧 info@jannethaguirrebienesraices.com</p>
+                  <p>📧 jannethaguirrecontacto@gmail.com</p>
                   <p>📱 +593 98 716 7782</p>
                   <p>📍 Guayaquil, Ecuador</p>
                 </div>
