@@ -96,7 +96,7 @@ export const properties: Property[] = [
     priceType: "",
     area: "118 m²",
     bedrooms: 3,
-    bathrooms: 3.5,
+    bathrooms: 3,
     parking: 2,
     description:
       "Exclusividad y confort en Isla Mocolí. Ubicación estratégica Km 6, zona de alta plusvalía rodeada de naturaleza.",
@@ -124,7 +124,7 @@ export const properties: Property[] = [
       Dormitorios: "3",
       Baños: "2.5",
       Parqueaderos: "2",
-      Piso: "varios pisos disponibles",
+      Piso: "Varios pisos disponibles",
       "Año de construcción": "2024",
       Estado: "En construcción",
     },
@@ -149,7 +149,7 @@ export const properties: Property[] = [
   {
     id: "casas-modernas-urbanizacion-residencial",
     name: "Casas Modernas en Urbanización Residencial",
-    location: "Vía Nuevo Saborondón, Guayaquil",
+    location: "Vía Nuevo Samborondón, Guayaquil",
     price: 180000,
     priceType: "",
     area: "120 m² construcción / 180 m² terreno",
@@ -183,7 +183,7 @@ export const properties: Property[] = [
       Baños: "2.5",
       Parqueaderos: "2",
       "Año de construcción": "2024",
-      Estado: "En construccion",
+      Estado: "En construcción",
     },
     financing: {
       title: "FINANCIAMIENTO FLEXIBLE",
@@ -211,7 +211,7 @@ export const properties: Property[] = [
     priceType: "Desde",
     area: "Desde 40 m²",
     bedrooms: 0,
-    bathrooms: p,
+    bathrooms: 1,
     parking: 0,
     description:
       "Invierte en tu futuro con estos locales comerciales y consultorios estratégicamente ubicados en el corazón de Nuevo Samborondón.",
@@ -233,11 +233,11 @@ export const properties: Property[] = [
     ],
     specifications: {
       Área: "Desde 40 m²",
-      Baños: "0",
+      Baños: "1",
       Parqueaderos: "0",
       Piso: "Planta baja y segundo piso",
       "Año de construcción": "2024",
-      Estado: "En construccion",
+      Estado: "En construcción",
     },
     financing: {
       title: "FINANCIAMIENTO FLEXIBLE",
