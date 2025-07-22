@@ -376,6 +376,57 @@ export default function NosotrosPage() {
 
                 <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <Image
+                    src="/images/delegado-de-caince-inmoperu.jpg"
+                    alt="Janneth Aguirre con delegado de CAINEC en Congreso de Mujeres Inmobiliarias del Perú"
+                    width={400}
+                    height={400}
+                    className="w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-white font-poppins text-sm font-semibold">Congreso Mujeres Inmobiliarias</p>
+                      <p className="text-white/80 font-poppins text-xs">Con delegado CAINEC</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <Image
+                    src="/images/intentendente-samborondon.jpg"
+                    alt="Janneth Aguirre con el Intendente de Samborondón en evento oficial"
+                    width={400}
+                    height={400}
+                    className="w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-white font-poppins text-sm font-semibold">Con Intendente de Samborondón</p>
+                      <p className="text-white/80 font-poppins text-xs">Relaciones Institucionales</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <Image
+                    src="/images/premi-mejor-desempeño.jpg"
+                    alt="Janneth Aguirre recibiendo premio por Mejor Desempeño Comercial"
+                    width={400}
+                    height={400}
+                    className="w-full aspect-square object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-white font-poppins text-sm font-semibold">Premio Mejor Desempeño</p>
+                      <p className="text-white/80 font-poppins text-xs">Reconocimiento Comercial</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <Image
                     src="/images/janneth-evento-cainec.jpg"
                     alt="Janneth Aguirre en evento CAINEC con patrocinadores del sector inmobiliario"
                     width={400}
