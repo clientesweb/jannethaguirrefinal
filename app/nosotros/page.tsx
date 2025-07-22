@@ -235,7 +235,7 @@ export default function NosotrosPage() {
                     </div>
                     <div className="flex flex-col items-center">
                       <Mail className="w-6 h-6 text-red-600 mb-2" />
-                      <span className="font-poppins text-sm text-gray-700">📧 info@jannethaguirrebienesraices.com</span>
+                      <span className="font-poppins text-sm text-gray-700">📧 jannethaguirrecontacto@gmail.com</span>
                     </div>
                     <div className="flex flex-col items-center">
                       <Globe className="w-6 h-6 text-red-600 mb-2" />
@@ -483,7 +483,7 @@ export default function NosotrosPage() {
                 <h3 className="text-lg sm:text-xl font-anton font-bold mb-3 sm:mb-4">CONTACTO</h3>
                 <div className="space-y-2 font-poppins text-gray-300 text-sm sm:text-base">
                   <p>🌐 www.jannethaguirre.com</p>
-                  <p>📧 info@jannethaguirrebienesraices.com</p>
+                  <p>📧 jannethaguirrecontacto@gmail.com</p>
                   <p>📱 +593 98 716 7782</p>
                   <p>📍 Guayaquil, Ecuador</p>
                 </div>
