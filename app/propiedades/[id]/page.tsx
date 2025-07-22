@@ -384,7 +384,7 @@ export default function PropertyDetailPage({ params }: PropertyDetailPageProps) 
                             Janneth Aguirre
                           </h4>
                           <p className="font-poppins text-xs sm:text-sm text-gray-600">Agente Inmobiliario</p>
-                          <p className="font-poppins text-xs sm:text-sm text-gray-600">20+ años de experiencia</p>
+                          <p className="font-poppins text-xs sm:text-sm text-gray-600">15+ años de experiencia</p>
                         </div>
                       </div>
 
