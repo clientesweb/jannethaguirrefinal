@@ -73,7 +73,7 @@ export const properties: Property[] = [
     financing: {
       title: "FINANCIAMIENTO FLEXIBLE",
       options: [
-        "Reserva con solo $500",
+        "Reserva con solo $1000",
         "10% a la firma de la promesa de compraventa",
         "20% durante la construcción en hasta 36 meses",
         "70% con financiamiento bancario o BIESS",
@@ -131,7 +131,7 @@ export const properties: Property[] = [
     financing: {
       title: "FINANCIAMIENTO FLEXIBLE",
       options: [
-        "Reserva con solo $500",
+        "Reserva con solo $1000",
         "10% a la firma de la promesa de compraventa",
         "20% durante la construcción en hasta 36 meses",
         "70% con financiamiento bancario o BIESS",
@@ -188,7 +188,7 @@ export const properties: Property[] = [
     financing: {
       title: "FINANCIAMIENTO FLEXIBLE",
       options: [
-        "Reserva con solo $500",
+        "Reserva con solo $1000",
         "10% a la firma de la promesa de compraventa",
         "20% durante la construcción en hasta 36 meses",
         "70% con financiamiento bancario o BIESS",
@@ -242,7 +242,7 @@ export const properties: Property[] = [
     financing: {
       title: "FINANCIAMIENTO FLEXIBLE",
       options: [
-        "Reserva con solo $500",
+        "Reserva con solo $1000",
         "10% a la firma de la promesa de compraventa",
         "20% durante la construcción en hasta 36 meses",
         "70% con financiamiento bancario o BIESS",
@@ -299,7 +299,7 @@ export const properties: Property[] = [
     financing: {
       title: "FINANCIAMIENTO FLEXIBLE",
       options: [
-        "Reserva con solo $500",
+        "Reserva con solo $1000",
         "10% a la firma de la promesa de compraventa",
         "20% durante la construcción en hasta 36 meses",
         "70% con financiamiento bancario o BIESS",
