@@ -402,7 +402,7 @@ export default function NosotrosPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-4 left-4 right-4">
-                      <p className="text-white font-poppins text-sm font-semibold">Con Intendente de Samborondón</p>
+                      <p className="text-white font-poppins text-sm font-semibold">Con Alcalde de Samborondón</p>
                       <p className="text-white/80 font-poppins text-xs">Relaciones Institucionales</p>
                     </div>
                   </div>
