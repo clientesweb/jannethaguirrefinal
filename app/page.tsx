@@ -362,7 +362,7 @@ export default function HomePage() {
               {/* Magazine Banner */}
               <div className="w-full flex-shrink-0">
                 <a
-                  href="https://www.jannethaguirre.online"
+                  href="https://www.jannethaguirremagazine.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full hover:opacity-95 transition-opacity focus:outline-none focus:ring-4 focus:ring-red-600 focus:ring-offset-2"
