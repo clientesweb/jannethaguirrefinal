@@ -68,8 +68,8 @@ export default function HomePage() {
             <div className="flex items-center flex-shrink-0">
               <Link href="/" aria-label="Ir al inicio - Janneth Aguirre Bienes Raíces">
                 <Image
-                  src="/images/logo-janneth-aguirre.webp"
-                  alt="Janneth Aguirre Bienes Raíces"
+                  src="/images/logo-navidad.webp"
+                  alt="Janneth Aguirre Bienes Raíces - Navidad"
                   width={200}
                   height={80}
                   className="h-10 sm:h-12 w-auto"
@@ -134,8 +134,8 @@ export default function HomePage() {
         <section className="w-full" aria-label="Imagen principal - Encuentra tu hogar ideal">
           <div className="w-full">
             <Image
-              src="/images/encuentra-tu-hogar-ideal-new.webp"
-              alt="Encuentra tu hogar ideal - Desarrollo residencial moderno con casas contemporáneas de piedra y diseño elegante"
+              src="/images/banner-navidad.webp"
+              alt="¡Encuentra tu hogar ideal! - Promoción navideña de propiedades Janneth Aguirre"
               width={1920}
               height={1080}
               className="w-full h-auto"
@@ -535,8 +535,8 @@ export default function HomePage() {
                 {/* Company Info */}
                 <div className="lg:col-span-1">
                   <Image
-                    src="/images/logo-janneth-aguirre.webp"
-                    alt="Janneth Aguirre Bienes Raíces"
+                    src="/images/logo-navidad.webp"
+                    alt="Janneth Aguirre Bienes Raíces - Navidad"
                     width={200}
                     height={80}
                     className="h-12 w-auto mb-4 brightness-0 invert"
