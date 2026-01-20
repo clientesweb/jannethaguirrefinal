@@ -68,7 +68,7 @@ export default function HomePage() {
             <div className="flex items-center flex-shrink-0">
               <Link href="/" aria-label="Ir al inicio - Janneth Aguirre Bienes Raíces">
                 <Image
-                  src="/images/logo-navidad.webp"
+                  src="/images/logo-janneth-aguirre.webp"
                   alt="Janneth Aguirre Bienes Raíces - Navidad"
                   width={200}
                   height={80}
