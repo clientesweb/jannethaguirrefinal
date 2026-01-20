@@ -134,7 +134,7 @@ export default function HomePage() {
         <section className="w-full" aria-label="Imagen principal - Encuentra tu hogar ideal">
           <div className="w-full">
             <Image
-              src="/images/banner-navidad.webp"
+              src="/images/encuentra-tu-hogar-ideal.webp"
               alt="¡Encuentra tu hogar ideal! - Promoción navideña de propiedades Janneth Aguirre"
               width={1920}
               height={1080}
@@ -535,7 +535,7 @@ export default function HomePage() {
                 {/* Company Info */}
                 <div className="lg:col-span-1">
                   <Image
-                    src="/images/logo-navidad.webp"
+                    src="/images/logo-janneth-aguirre.webp"
                     alt="Janneth Aguirre Bienes Raíces - Navidad"
                     width={200}
                     height={80}
